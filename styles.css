@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --background-color: #f3f4f6;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+#home {
+   background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+   text-align: center;
+}
+
+.home-content h1 {
+   font-size: 3rem;
+   color: var(--primary-color);
+   margin-bottom: 1rem;
+}
+
+.home-content p {
+   font-size: 1.2rem;
+   color: var(--text-color);
+   margin-bottom: 2rem;
+}
+
+.social-links {
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+.social-links a {
+   color: var(--text-color);
+   font-size: 2rem;
+   transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+   transform: scale(1.2);
+   color: var(--primary-color);
+}
+
+/* About Section */
+#about {
+   background-color: white;
+   display: flex;
+   align-items: center;
+}
+
+.about-content {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+   align-items: center;
+}
+
+.about-text {
+   max-width: 500px;
+}
+
+.about-image {
+   text-align: center;
+}
+
+.about-image img {
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   object-fit: cover; 
+   border: 5px solid var(--primary-color);
+}
+
+/* Projects Section */
+#projects {
+   background-color: var(--background-color);
+}
+
+.projects-grid {
+   display:grid; 
+   grid-template-columns : repeat(auto-fit,minmax(300px,1fr));
+   gap : 1.5rem; 
+}
+
+.project-card {
+   background-color : white; 
+   border-radius :10px; 
+   padding :1.5rem; 
+   box-shadow :0 4px 6px rgba(0,0,0,0.1); 
+   transition :transform .3s ease; 
+}
+
+.project-card:hover { 
+   transform :translateY(-10px); 
+}
+
+.project-card h3 { 
+   color :var(--primary-color); 
+   margin-bottom :1rem; 
+}
+
+.project-tags { 
+   display:flex; 
+   flex-wrap :wrap; 
+   gap :0.5rem; 
+   margin-top :1rem; 
+}
+
+.project-tag { 
+   background-color :var(--background-color); 
+   color :var(--text-color); 
+   padding :0.3rem .7rem; 
+   border-radius :20px; 
+   font-size :.8rem; 
+}
+
+/* Contact Section */
+#contact { 
+	background-color:white; 
+} 
+
+.contact-form {  
+	max-width :500px;  
+	margin :0 auto;  
+	background-color :var(--background-color);  
+	padding :2rem;  
+	border-radius :10px;  
+} 
+
+.contact-form input,
+.contact-form textarea {  
+	width :100%;  
+	padding :.75rem;  
+	margin-bottom :1rem;  
+	border :1px solid #d1d5db;  
+	border-radius :5px;  
+} 
+
+.contact-form button {  
+	width :100%;  
+	padding :.75rem;  
+	background-color :var(--primary-color);  
+	color:white;  
+	border:none;  
+	border-radius :5px;  
+	cursor:pointer;  
+	transition :background-color .3s ease;  
+} 
+
+.contact-form button:hover {  
+	background-color :var(--secondary-color);  
+}
+
+/* Responsive Design */
+@media screen and (max-width :768px) {  
+	.about-content {  
+		grid-template-columns :1fr;  
+		text-align:center;  
+	}  
+
+	.about-image {  
+		margin-top :1rem;  
+	}  
+
+	.navbar-menu {  
+		display:none; /* Add mobile menu toggle later */  
+	}  
+}
+
+/* Existing styles... */
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color); /* Footer background color */
+    color: white; /* Default footer text color */
+    text-align: center;
+    padding: 1.5rem 0; /* Increased padding for better spacing */
+    position: relative; /* Ensure it stays at the bottom of the page */
+    margin-top: 2rem; /* Space above footer */
+}
+
+footer a {
+    color: #ffffff; /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+footer a:hover {
+    color: #ffcc00; /* Hover color */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem; /* Font size for footer text */
+}
+
+/* Responsive Design for Footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 1rem 0; /* Adjust padding for smaller screens */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Slightly smaller font size on mobile */
+    }
+}
+
+/* Existing styles... */
